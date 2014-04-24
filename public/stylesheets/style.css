@@ -18,6 +18,7 @@ div.right {
   height: 100%;
   left: 80%;
   top: 0;
+  background-color: #adff2f;
 }
 div.right ul {
   list-style-type: none;
