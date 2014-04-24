@@ -21,8 +21,15 @@
     }
 
     function addMessage(peerId, text) {
-        $("p").text(text).appendTo(".log");
-
+        if (text && text.length) {
+            var $message = $("<p><span class='user'></span><span class='text'></span><time></time>");
+            $message.find('.user').text(peerId);
+            $message.find('.text').text(text);
+            var now = new Date();
+            var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+            $message.find('time').text(time);
+            $message.appendTo(".log");
+        }
     }
 
     $(function () {
