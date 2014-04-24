@@ -29,7 +29,7 @@ app.get('/', routes.index);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-var webRTC = require('webrtc.io').listen(server);
+var webRTC = require('WebRTC.io').listen(server);
 //then a bunch of callbacks are available
 console.log('WebRTC server listening on port 8001');
 
