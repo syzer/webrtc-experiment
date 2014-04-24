@@ -1,5 +1,7 @@
 (function () {
-    var ownPeerId = window.prompt("Username");
+    var ownPeerId = window.prompt("Username", localStorage.getItem("username") || "");
+    localStorage.setItem("username", ownPeerId);
+
     var peer = window.peer = new Peer(ownPeerId, {host: 'localhost', port: 9000, path: '/chat'});
     peer.listAllPeers(function (users) {
         users.forEach(function (peerId) {
