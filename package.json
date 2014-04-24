@@ -9,7 +9,7 @@
     "express": "3.4.8",
     "jade": "*",
     "lodash-node": "^2.4.1",
-    "webrtc.io": "0.0.4",
-    "winston": "^0.7.3"
+    "winston": "^0.7.3",
+    "peer": "^0.2.5"
   }
 }
