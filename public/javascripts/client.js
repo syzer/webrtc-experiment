@@ -1,27 +1,24 @@
 (function () {
+    var ownPeerId = window.prompt("Username");
+
     var users = {};
 
-    var socket = new WebSocket("ws://" + location.hostname + ":8001/connect");
-    socket.onopen = function () {
+    var peer = window.peer = new Peer(ownPeerId, {host: 'localhost', port: 9000, path: '/chat'});
+    peer.listAllPeers(function (users) {
+        users.forEach(function (peerId) {
+            addUser(peer.connect(peerId));
+        });
+    });
+    peer.on('connection', function (conn) {
+        addUser(conn);
+    });
 
-    };
-    socket.onmessage = function (e) {
-        var message = JSON.parse(e.data);
-        switch (message.type) {
-            case "user-connected":
-                var username = message.username;
-                var $user = $("li").text(username);
-                users[message.user] = {name: username, $el: $user};
-                $("ul.users").append($user);
-                break;
-            case "user-disconnected":
-                var user = users[message.user];
-                if (user) {
-                    user.$el.remove();
-                }
-                break;
-        }
-    };
+    function addUser(conn) {
+        var $el = $("<li>").text(conn.peer).appendTo("ul.users");
+        conn.on('close', function () { // TODO not called?
+            $el.remove();
+        });
+    }
 
 })();
 
