@@ -3,6 +3,7 @@ body,
 form {
   height: 100%;
   font-family: sans-serif;
+  overflow: hidden;
 }
 div {
   border: 1px solid #000;
@@ -31,6 +32,7 @@ div.log {
   top: 0;
   width: 100%;
   height: calc(100% - 30px);
+  overflow: auto;
 }
 div.log p {
   margin: 1em;
