@@ -1,8 +1,49 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html,
+body,
+form {
+  height: 100%;
 }
-
-a {
-  color: #00B7FF;
+div {
+  border: 1px solid #000;
+  position: absolute;
+}
+div.left {
+  width: 80%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+div.right {
+  width: 20%;
+  height: 100%;
+  left: 80%;
+  top: 0;
+}
+div.right ul {
+  list-style-type: none;
+  padding: 1em;
+  margin: 0;
+}
+div.log {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% - 30px);
+}
+div.log p {
+  margin: 1em;
+}
+div.log p .user {
+  padding-right: 1em;
+}
+div.log p time {
+  float: right;
+}
+div.input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+div.input input {
+  width: 80%;
 }
