@@ -1,8 +1,4 @@
 
-/**
- * Module dependencies.
- */
-
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
@@ -55,25 +51,6 @@ webRTC.rtc.on('chat_msg', function(data, socket) {
     }
 });
 
-//app.get('/', function(req, res) {
-//    res.sendfile(__dirname + '/index.html');
-//});
-//
-//app.get('/style.css', function(req, res) {
-//    res.sendfile(__dirname + '/style.css');
-//});
-//
-//app.get('/fullscrean.png', function(req, res) {
-//    res.sendfile(__dirname + '/fullscrean.png');
-//});
-//
-//app.get('/script.js', function(req, res) {
-//    res.sendfile(__dirname + '/script.js');
-//});
-//
-//app.get('/webrtc.io.js', function(req, res) {
-//    res.sendfile(__dirname + '/webrtc.io.js');
-//});
 var winston = require('winston');
 
 winston.log('info', 'Hello distributed log files!');
