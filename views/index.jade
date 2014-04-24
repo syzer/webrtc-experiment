@@ -1,5 +1,22 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='/javascripts/client.js')
+    body
+        form
+            div.left
+                div.log
+                    p
+                        span.user Peter
+                        span.text Bla bla bla...
+                        time 00:00
+                div.input
+                    input(placeholder='Enter your message here...')
+                    button Send
+            div.right
+                ul.users
+                    li User 1
+                    li User 2
+                    li User 3
