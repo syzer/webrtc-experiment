@@ -18,3 +18,4 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 var PeerServer = require('peer').PeerServer;
 var server = new PeerServer({port: 9000, path: '/myapp'});
+log.info('Now running on port 9000');
