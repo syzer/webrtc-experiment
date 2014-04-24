@@ -33,23 +33,10 @@ app.get('/', routes.index);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-var webRTC = require('webrtc.io').listen(8001);
+var webRTC = require('webrtc.io').listen(server);
 //then a bunch of callbacks are available
 console.log('WebRTC server listening on port 8001');
 
-var app = require('express')();
-var server = require('http').createServer(app);
-var webRTC = require('webrtc.io').listen(server);
-
-var port = process.env.PORT || 8080;
-server.listen(port);
-
-var app = require('express')();
-var server = require('http').createServer(app);
-var webRTC = require('webrtc.io').listen(server);
-
-var port = process.env.PORT || 8080;
-server.listen(port);
 
 
 webRTC.rtc.on('chat_msg', function(data, socket) {
