@@ -74,3 +74,7 @@ webRTC.rtc.on('chat_msg', function(data, socket) {
 //app.get('/webrtc.io.js', function(req, res) {
 //    res.sendfile(__dirname + '/webrtc.io.js');
 //});
+var winston = require('winston');
+
+winston.log('info', 'Hello distributed log files!');
+winston.info('Hello again distributed logs');
