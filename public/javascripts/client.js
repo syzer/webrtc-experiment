@@ -1,7 +1,7 @@
 (function () {
     var users = {};
 
-    var socket = new WebSocket("ws://" + location.host + "/connect");
+    var socket = new WebSocket("ws://" + location.hostname + ":8001/connect");
     socket.onopen = function () {
 
     };
