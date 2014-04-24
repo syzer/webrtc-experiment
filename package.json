@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "3.4.8",
     "jade": "*",
-    "lodash-node": "^2.4.1"
+    "lodash-node": "^2.4.1",
+    "webrtc.io": "0.0.4"
   }
 }
