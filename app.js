@@ -14,5 +14,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
-  log.info('Express server listening on port ' + app.get('port'));
+    log.info('Express server listening on port ' + app.get('port'));
 });
