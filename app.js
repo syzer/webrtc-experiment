@@ -85,5 +85,3 @@ webRTC.rtc.on('chat_msg', function(data, socket) {
 //app.get('/webrtc.io.js', function(req, res) {
 //    res.sendfile(__dirname + '/webrtc.io.js');
 //});
-
-x
