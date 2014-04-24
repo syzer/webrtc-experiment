@@ -16,3 +16,5 @@ app.get('/', routes.index);
 http.createServer(app).listen(app.get('port'), function(){
     log.info('Express server listening on port ' + app.get('port'));
 });
+var PeerServer = require('peer').PeerServer;
+var server = new PeerServer({port: 9000, path: '/myapp'});
