@@ -1,5 +1,7 @@
 # WebRTC experiment
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/syzer/webrtc-experiment.svg)](https://greenkeeper.io/)
+
 App allows to chat of multiple users
 based on peer-to-peer architecture.
 
